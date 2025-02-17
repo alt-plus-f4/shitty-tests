@@ -28,4 +28,4 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           pip install pytest
-          python -m pytest .\tests\test.py --verbose
+          python -m pytest ./tests/test.py --verbose
