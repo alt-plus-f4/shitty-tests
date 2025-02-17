@@ -1,3 +1,5 @@
+import unittest
+
 class Base:
     def process(self, data):
         if self._is_valid_dict(data):
@@ -106,12 +108,4 @@ class Final(Intermediate):
             return "FINAL CHECK: STRING"
         return "FINAL CHECK: UNEXPECTED CONFIRMATION"
 
-# Example of bad practice usage
-def main():
-    obj = Final()
-    test_data = [{"value": 5}, {"value": "HELLO"}, {"value": -2}, {"value": "hi"}, {}, {"other": 42}, {"value": None}]
-    for data in test_data:
-        print(obj.process(data))
 
-if __name__ == "__main__":
-    main()
