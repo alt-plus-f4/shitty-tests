@@ -1,7 +1,7 @@
 import unittest
-import src.Base as Base
-import src.Intermediate as Intermediate
-import src.Final as Final
+from src.Tests import Base
+from src.Tests import Intermediate
+from src.Tests import Final
 
 class TestProcessing(unittest.TestCase):
     def setUp(self):
@@ -39,16 +39,5 @@ class TestProcessing(unittest.TestCase):
         self.assertEqual(self.final._confirm_result("GENERAL CONFIRMED STRING"), "FINAL CHECK: STRING")
         self.assertEqual(self.final._confirm_result("UNKNOWN"), "FINAL CHECK: UNEXPECTED CONFIRMATION")
 
-
-        
-
-
-def main():
-    obj = TestProcessing()
-    obj.setUp()
-    obj.test_base_methods()
-    obj.test_intermediate_methods()
-    obj.test_final_methods()
-
 if __name__ == "__main__":
-    main()
+    unittest.main()
