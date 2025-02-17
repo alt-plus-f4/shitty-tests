@@ -25,7 +25,6 @@ jobs:
 
       - name: Run tests with pytest
         run: |
-          pip install pytest
           python -m venv venv
           source venv/bin/activate
           python -m pytest --verbose
