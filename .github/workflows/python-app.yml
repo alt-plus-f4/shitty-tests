@@ -40,4 +40,7 @@ jobs:
         env:
           PYTHONPATH: src  # Ensure Python can find 'src' as a module
         run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install pytest
           pytest tests/ --verbose
